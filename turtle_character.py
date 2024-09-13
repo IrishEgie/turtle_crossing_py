@@ -11,11 +11,12 @@ class Player(Turtle):
         self.shape("turtle")
         self.moving_up = False
         self.moving_down = False
+        self.move_speed = 10
 
 
     def move_up(self):
         if self.moving_up:
-            new_y = self.ycor() + 20
+            new_y = self.ycor() + self.move_speed 
             self.goto(self.xcor(),new_y)
             screen.ontimer(self.move_up, rep)  # Repeat every 25ms
             print("Moving up")
