@@ -9,7 +9,7 @@ class Cars(Turtle):
         self.color(self.random_colors())
         self.penup()
         self.shape("square")
-        self.shapesize(1,3,1)
+        self.shapesize(1,2,0)
         self.setheading(180)
         self.speed(rd.randint(5,15))
         self.setx(290)
