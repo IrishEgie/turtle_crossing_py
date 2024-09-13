@@ -29,22 +29,22 @@ class Player(Turtle):
 
     def start_moving_up (self):
         self.moving_up = True
-        self.move_up
+        self.move_up()
     def stop_moving_up(self):
         self.moving_up = False
 
     def start_moving_down(self):
         self.moving_down = True
-        self.move_down
+        self.move_down()
     def stop_moving_down(self):
         self.moving_down = False
 
     def listen_keys(self):
         screen.listen()
-        screen.onkeypress(self.start_moving_up(), "w")
-        screen.onkeyrelease(self.stop_moving_up(), "w")
-        screen.onkeypress(self.start_moving_down(), "s")
-        screen.onkeyrelease(self.stop_moving_down(), "s")
+        screen.onkeypress(self.start_moving_up, "w")
+        screen.onkeypress(self.start_moving_down, "s")
+        screen.onkeyrelease(self.stop_moving_up, "w")
+        screen.onkeyrelease(self.stop_moving_down, "s")
 
     def reset_pos(self):
         self.clear()
